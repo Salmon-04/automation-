@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кадровый учет</title>
+    <link rel="stylesheet" href="../Css/Style.css">
+    <link rel="stylesheet" href="../Css/registration.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../Html/Index.html"><img src="../img/Logo.png" alt="Кадровый учет" class="img_logo"></a>
+
+        <ul class="menu">
+            <li>
+            <a href="../Html/Index.html">Главная</a>
+            </li>
+            <li>
+                <select name="navigation" id="pageSelect" onchange="navigateToPage(this.value)">
+                    <option value="">Отделы</option>
+                    <option value="../Html/Sotrudniki.html">Сотрудники</option>
+                    <option value="../Html/Dolzhnosti.html">Должности</option>
+                </select>
+            </li>
+            <li>
+                <a href="../Html/kadrovoe_peremeshenie.html">Кадровое перемещения</a>
+            </li>
+            <li>
+                <a href="../Html/Otpuska_bolnichnie.html">Отпуска-больничные</a>
+            </li>
+
+        </ul>
+        
+        <div class="User">
+            <span onclick="showPopup('popup10')">User</span>   
+            <img src="../icon/user-line.png" alt="" onclick="showPopup('popup10')">
+            </div>
+
+
+    </header>
+
+    <main>
+        <div class="sidebar_otdeli">
+            <br>
+            <ul class="sidebar-menu">
+                <input type="button" value="Добавить отдел"></input>
+                <input type="button" value="Удалить отдел"></input>
+                <input type="button" value="Редактировать отдел"></input>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content_otdeli">
+            <h1>Отделы</h1>
+                <input type="button" value="Добавить"></input>
+                <input type="button" value="Обновить"></input>
+                <input type="button" value="Удалить"></input>
+                <input type="button" value="Редактировать"></input>
+            </div>
+        <div class="otdeli">
+            <table class="otdel" border="2px">  
+                <tr>
+                    <th>ID</th>
+                    <th>Наименование</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>Наименование</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Кадровый учет. Все права защищены.</p>
+    </footer>
+    <div id ="popup10" class="popup-s">
+        <div class="wrapper">
+            <div class="login-box">
+            <span class="popup-close closes" onclick="hidePopup('popup10')">&times;</span> 
+            <div class="login-header">
+                <span>Входа</span>
+            </div>
+    
+            <div class="input_box">
+                <input type="text" id="username" class="input-field" required>
+                <label for="user" class="label">Логин</label>
+                <i class="bx bx-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass" class="input-field" required>
+                <label for="pass" class="label">Пароль</label>
+                <i class="bx bx-lock-alt icon"></i>
+            </div>
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" class="remember"> Запомнить меня </label>
+                </div>
+                <div class="forgot">
+                    <a href="#"> Забыл пароль ?</a>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="submit" class="input-submit" value="Вход">
+            </div>
+            <div class="register">
+                <span> У вас нет аккаунт ? <a href="#">Регистрация</a></span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

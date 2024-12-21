@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кадровый учет</title>
+    <link rel="stylesheet" href="../Css/Style.css">
+    <link rel="stylesheet" href="../Css/registration.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../Html/Index.html"><img src="../img/Logo.png" alt="Кадровый учет" class="img_logo"></a>
+
+        <ul class="menu">
+            <li>
+            <a href="../Html/Index.html">Главная</a>
+            </li>
+            <li>
+                <select name="navigation" id="pageSelect" onclick="navigateToPage(this.value)">
+                    <option value="../Html/Sotrudniki.html">Сотрудники</option>
+                    <option value="../Html/Dolzhnosti.html">Должности</option>
+                    <option value="../Html/Otdeli.html">Отделы</option>
+                </select>
+            </li>
+            <li>
+                <a href="../Html/kadrovoe_peremeshenie.html">Кадровое перемещения</a>
+            </li>
+            <li>
+                <a href="../Html/Otpuska_bolnichnie.html">Отпуска-больничные</a>
+            </li>
+
+        </ul>
+        
+        <div class="User">
+            <span onclick="showPopup('popup10')">User</span>   
+            <img src="../icon/user-line.png" alt="" onclick="showPopup('popup10')">
+            </div>
+
+
+    </header>
+
+    <main>
+
+
+        <div class="content">
+            <div class="content_otdeli">
+            <h1>Отпуска-больничные </h1>
+            <input type="button" value="Отправить в отпуск" onclick="showPopup('popup8')"></input>
+            </div>
+            <div class="dezhurnaya">
+                <table class="dezh" border="2px">  
+                    <tr>
+                        <th>ID_sotrudnika</th>
+                        <th>FIO</th>
+                        <th>data prihoda</th>
+                        <th>data uhoda</th>
+                    </tr>
+                    <tr>
+                        <td>ID_sotrudnika</td>
+                        <td>FIO</td>
+                        <td>data prihoda</td>
+                        <td>data uhoda</td>
+                    </tr>
+                </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Кадровый учет. Все права защищены.</p>
+    </footer>
+    <div id="popup8" class="popup-p">
+        <div class="popup-header">
+            Отправить в отпуск
+            <span class="popup-close" onclick="hidePopup('popup8')">&times;</span>
+        </div>
+        <div>
+            <form>
+                <!-- Данные для Отправить в отпуск -->
+                <label for="id_sotrudnika">ID Сотрудника:</label><br>
+                <input type="text" id="id_sotrudnika" name="id_sotrudnika"><br>
+                <label for="fio">ФИО:</label><br>
+                <input type="text" id="fio" name="fio"><br>
+                <label for="date_start">Дата начала отпуска:</label><br>
+                <input type="date" id="date_start" name="date_start"><br>
+                <label for="date_end">Дата окончания отпуска:</label><br>
+                <input type="date" id="date_end" name="date_end"><br>
+    
+            </form>
+        </div>
+        <div class="pop_sub">
+            <input type="submit" value="Отправить запрос">
+        </div>
+    </div>
+    <div id ="popup10" class="popup-s">
+        <div class="wrapper">
+            <div class="login-box">
+            <span class="popup-close closes" onclick="hidePopup('popup10')">&times;</span>
+            <div class="login-header">
+                <span>Входа</span>
+                 
+            </div>
+    
+            <div class="input_box">
+                <input type="text" id="username" class="input-field" required>
+                <label for="user" class="label">Логин</label>
+                <i class="bx bx-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass" class="input-field" required>
+                <label for="pass" class="label">Пароль</label>
+                <i class="bx bx-lock-alt icon"></i>
+            </div>
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" class="remember"> Запомнить меня </label>
+                </div>
+                <div class="forgot">
+                    <a href="#"> Забыл пароль ?</a>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="submit" class="input-submit" value="Вход">
+            </div>
+            <div class="register">
+                <span> У вас нет аккаунт ? <a href="#">Регистрация</a></span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

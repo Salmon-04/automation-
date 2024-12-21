@@ -1,0 +1,522 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/5590457.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+header {
+    font-family: Arial, sans-serif;
+    display : flex;
+    justify-content: space-around;  
+    align-items: center;  
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: #1F1F2E;
+    font-size: 18px;
+    border: 1px solid #1a142c;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    align-items: center ;
+}   
+
+.img_logo {
+    width: 150px;
+    height: 25px;
+    align-items: center ;
+}
+
+.User {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    position: sticky;
+    top: 70px;  
+    width: 25%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  480px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+}   
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content {
+    top: 50px;  
+    width: 90%;
+    height: 60%;
+    background-color: #282840;
+    padding-bottom: 300px;
+    margin-top: 80px;
+    margin-right: 10px;
+    padding: 3px 30px;
+    text-align: justify;
+    font-size: 14px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    font-family:'Times New Roman', Times, serif
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+select {
+    width: 100%;
+    padding: 8px 12px; 
+    box-sizing: border-box;
+    font-size: 20px;
+    color : white;
+    background-color: #1F1F2E;
+    border: 0px;
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: #1F1F2E;
+    font-size: 18px;
+    border: 1px solid #1a142c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sotrudniki */
+.sotrudniki {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}   
+.sotrudnik {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.content_sotrudniki {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar_sotrudniki {
+    position: sticky;
+    top: 70px;  
+    width: 25%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  420px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+
+/*Dolzhnosti*/
+
+.dolzhnosti {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}   
+.dolzhnost {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.content_dolzhnosti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar_dolzhnosti {
+    position: sticky;
+    top: 70px;  
+    width: 25%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  220px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+/*Otdeli */
+
+.otdeli {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}   
+.otdel {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.content_otdeli {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar_otdeli {
+    position: sticky;
+    top: 70px;  
+    width: 25%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+
+
+/*Button*/
+
+input {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0);
+    padding: 7px 20px;
+    font-weight: bold;
+    text-align: center; 
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+input:hover {
+    background-color: #888d9e; /* Темнее при наведении */
+  }
+
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    width: 400px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #1F1F2E;
+    font-size: 18px;
+    border: 1px solid #1a142c;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    
+.main_login {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.Voity {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.Voity button {
+    font-size: 20px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+.sidebar-pr {
+    position: sticky;
+    top: 70px;  
+    width: 25%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.sidebar-d {
+    position: sticky;
+    top: 70px;  
+    width: 20%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  60px;
+    padding-right: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.sidebar-o {
+    position: sticky;
+    top: 70px;  
+    width: 20%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  60px;
+    padding-right: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+.dezhurnaya{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.dezh{
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+
+.sidebar_otchet {
+    position: sticky;
+    top: 70px;  
+    width: 20%;
+    height: 100px;
+    background-color: #282840;
+    padding-bottom:  280px;
+    padding-right: 40px;
+    margin: 80px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/* Стили для всплывающих окон */ 
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            max-width: 90%;
+            padding: 20px;
+            background-color: #282840;
+            border: 1px solid #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+        .popup.active {
+            display: block;
+        }
+        .popup-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .popup-close {
+            cursor: pointer;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .popup-content {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .popup-content form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .popup-content label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .pop_sub{
+            display: flex;
+            justify-content: center;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .popup-p {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            max-width: 90%;
+            padding: 20px;
+            background-color: #282840;
+            border: 1px solid #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+        .popup-p.active {
+            display: block;
+        }
+        .popup-s {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            max-width: 90%;
+            padding: 20px;
+            background-color: #282840;
+            border: 1px solid #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+        .popup-s.active {
+            display: block;
+        }
+

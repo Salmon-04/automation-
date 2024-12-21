@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кадровый учет</title>
+    <link rel="stylesheet" href="../Css/Style.css">
+    <link rel="stylesheet" href="../Css/registration.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../Html/Index.html"><img src="../img/Logo.png" alt="Кадровый учет" class="img_logo"></a>
+
+        <ul class="menu">
+            <li>
+            <a href="../Html/Index.html">Главная</a>
+            </li>
+            <li>
+                <select name="navigation" id="pageSelect" onchange="navigateToPage(this.value)">
+                    <option value="">Сотрудники</option>
+                    <option value="../Html/Dolzhnosti.html">Должности</option>
+                    <option value="../Html/Otdeli.html">Отделы</option>
+                </select>
+            </li>
+            <li>
+                <a href="../Html/kadrovoe_peremeshenie.html">Кадровое перемещения</a>
+            </li>
+            <li>
+                <a href="../Html/Otpuska_bolnichnie.html">Отпуска-больничные</a>
+            </li>
+        </ul>
+        
+        <div class="User">
+        <span onclick="showPopup('popup10')">User</span>   
+        <img src="../icon/user-line.png" alt="" onclick="showPopup('popup10')">
+        </div>
+
+
+    </header>
+
+    <main>
+        <div class="sidebar_sotrudniki">
+            <br>
+            <ul class="sidebar-menu">
+                <input type="button" value="Приём на работу" onclick="showPopup('popup1')"></input>
+                <input type="button" value="Перемешение сотрудника" onclick="showPopup('popup2')"></input>
+                <input type="button" value="Повисить оклад" onclick="showPopup('popup5')"></input>
+                <input type="button" value="Уволить сотрудника" onclick="showPopup('popup6')"></input>
+                <input type="button" value="Расчитать оклад отдела" onclick="showPopup('popup6')"></input>
+                <input type="button" value="Повысить оклад отдела"></input>
+                <input type="button" value="Сократить отдел"></input>
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content_sotrudniki">
+            <h1>Сотрудники</h1>
+                <input type="button" value="Заполнить"></input>
+                <input type="button" value="Редактировать"></input>
+            </div>
+            <div class="sotrudniki">
+                <table class="sotrudnik" border="2px">  
+                    <tr>
+                        <th>ID</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Оклад</th>
+                        <th>Дата приема</th>
+                        <th>Должность</th>
+                        <th>Отдел</th>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>Фамилия</td>
+                        <td>Имя</td>
+                        <td>Отчество</td>
+                        <td>Оклад</td>
+                        <td>Дата приема</td>
+                        <td>Должность</td>
+                        <td>Отдел</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Кадровый учет. Все права защищены.</p>
+    </footer>
+    <div id="popup1" class="popup">
+        <div class="popup-header">
+            Приём на работу
+            <span class="popup-close" onclick="hidePopup('popup1')">&times;</span>
+        </div>
+        <div class="popup-content">
+            <form>
+                <div>
+                <label for="id_sotrudnika">id_sotrudnika(если имеется):</label>
+                <input type="text" id="id_sotrudnika" name="id_sotrudnika" class="priem_rab">
+                <label for="familiya">Фамилия:</label>
+                <input type="text" id="familiya" name="familiya" class="priem_rab">
+                <label for="imya">Имя:</label>
+                <input type="text" id="imya" name="imya">
+                <label for="otchestvo">Отчество:</label>
+                <input type="text" id="otchestvo" name="otchestvo">
+                </div>
+                <div>
+                <label for="adres">Адрес:</label>
+                <input type="text" id="adres" name="adres">
+                <label for="telefon">Телефон:</label>
+                <input type="text" id="telefon" name="telefon">
+                <label for="E-mail">E-mail:</label>
+                <input type="text" id="E-mail" name="E-mail">
+                <label for="data_rozhdeniya">Дата рождения:</label>
+                <input type="date" id="data_rozhdeniya" name="data_rozhdeniya">
+                </div>
+
+                <div>
+                <label for="id_dolzhnost">Должност:</label>
+                <input type="text" id="id_dolzhnost" name="id_dolzhnost">
+                <label for="id_otdel">Отдел:</label>
+                <input type="text" id="id_otdel" name="id_otdel">
+                <label for="Oklad">Оклад:</label>
+                <input type="number" id="Oklad" name="Oklad" class="priem_rab">
+                </div>
+
+            </form>
+        </div>
+        <div class="pop_sub">
+        <input type="submit" value="Принять на работу">
+        </div>
+    </div>
+
+<!-- Всплывающее окно для перемещения сотрудника -->
+<div id="popup2" class="popup-p">
+    <div class="popup-header">
+        Перемещение сотрудника
+        <span class="popup-close" onclick="hidePopup('popup2')">&times;</span>
+    </div>
+    <div>
+        <form>
+            <!-- Данные для перемещения сотрудника -->
+            <label for="id_sotrudnika">ID Сотрудника:</label><br>
+            <input type="text" id="id_sotrudnika" name="id_sotrudnika"><br>
+            <label for="new_dolzhnost">Старая должность:</label><br>
+            <input type="text" id="old_dolzhnost" name="new_dolzhnost"><br>
+            <label for="new_dolzhnost">Новая должность:</label><br>
+            <input type="text" id="new_dolzhnost" name="new_dolzhnost"><br>
+            <label for="new_otdel">Старый отдел:</label><br>
+            <input type="text" id="old_otdel" name="new_otdel"><br>
+            <label for="new_otdel">Новый отдел:</label><br>
+            <input type="text" id="new_otdel" name="new_otdel"><br>
+            <label for="data_peremeshcheniya">Дата перемещения:</label><br>
+            <input type="date" id="data_peremeshcheniya" name="data_peremeshcheniya"><br>
+            
+        </form>
+    </div>
+    <div class="pop_sub">
+    <input type="submit" value="Переместить сотрудника">
+    </div>
+</div>
+
+<!-- Всплывающее окно для повышения оклада -->
+<div id="popup5" class="popup-p">
+    <div class="popup-header">
+        Повысить оклад
+        <span class="popup-close" onclick="hidePopup('popup5')">&times;</span>
+    </div>
+    <div>
+        <form>
+            <!-- Данные для повышения оклада -->
+            <label for="id_sotrudnika">ID Сотрудника:</label><br>
+            <input type="text" id="id_sotrudnika" name="id_sotrudnika"><br>
+            <label for="fio">ФИО:</label><br>
+            <input type="text" id="fio" name="fio"><br>
+            <label for="new_oklad">Новый оклад:</label><br>
+            <input type="text" id="new_oklad" name="new_oklad"><br>
+            
+        </form>
+    </div>
+    <div class="pop_sub">
+        <input type="submit" value="Повысить оклад">
+    </div>
+</div>
+
+
+<!-- Всплывающее окно для увольнения сотрудника -->
+<div id="popup6" class="popup-p">
+    <div class="popup-header">
+        Уволить сотрудника
+        <span class="popup-close" onclick="hidePopup('popup6')">&times;</span>
+    </div>
+    <div>
+        <form>
+            <!-- Данные для увольнения сотрудника -->
+            <label for="id_sotrudnika">ID Сотрудника:</label><br>
+            <input type="text" id="id_sotrudnika" name="id_sotrudnika"><br>
+            <label for="fio">ФИО:</label><br>
+            <input type="text" id="fio" name="fio"><br>
+            <label for="date_uvolneniya">Дата увольнения:</label><br>
+            <input type="date" id="date_uvolneniya" name="date_uvolneniya"><br>
+
+        </form>
+    </div>
+    <div class="pop_sub">
+        <input type="submit" value="Уволить сотрудника">
+    </div>
+</div>
+
+<div id ="popup10" class="popup-s">
+    <div class="wrapper">
+        <div class="login-box">
+        <span class="popup-close closes" onclick="hidePopup('popup10')">&times;</span> 
+        <div class="login-header">
+            <span>Входа</span>
+        </div>
+
+        <div class="input_box">
+            <input type="text" id="username" class="input-field" required>
+            <label for="user" class="label">Логин</label>
+            <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+            <input type="password" id="pass" class="input-field" required>
+            <label for="pass" class="label">Пароль</label>
+            <i class="bx bx-lock-alt icon"></i>
+        </div>
+        <div class="remember-forgot">
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember" class="remember"> Запомнить меня </label>
+            </div>
+            <div class="forgot">
+                <a href="#"> Забыл пароль ?</a>
+            </div>
+        </div>
+        <div class="input_box">
+            <input type="submit" class="input-submit" value="Вход">
+        </div>
+        <div class="register">
+            <span> У вас нет аккаунт ? <a href="#">Регистрация</a></span>
+        </div>
+        </div>
+    </div>
+</div>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

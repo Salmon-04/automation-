@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кадровый учет</title>    
+    <link rel="stylesheet" href="../Css/Style.css">
+    <link rel="stylesheet" href="../Css/registration.css">
+    <style>
+        body {
+            background-color: #1f2430;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            width: 50%;
+            margin: 60px auto;
+            background-color: #2a2f3a;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .photo-section {
+            flex: 0 0 30%;
+            text-align: center;
+        }
+
+        .photo-section img {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #00bfff;
+            border-radius: 10px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00bfff;
+            margin-bottom: 20px;
+        }
+
+        .profile-details div {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .profile-details span {
+            font-weight: bold;
+            color: #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../Html/Index.html"><img src="../img/Logo.png" alt="Кадровый учет" class="img_logo"></a>
+
+        <ul class="menu">
+            <li>
+            <a href="../Html/Index.html">Главная</a>
+            </li>
+            <li>
+                <select name="navigation" id="pageSelect" onclick="navigateToPage(this.value)">
+                    <option value="../Html/Sotrudniki.html">Сотрудники</option>
+                    <option value="../Html/Dolzhnosti.html">Должности</option>
+                    <option value="../Html/Otdeli.html">Отделы</option>
+                </select>
+            </li>
+            <li>
+                <a href="../Html/kadrovoe_peremeshenie.html">Кадровое перемещения</a>
+            </li>
+            <li>
+                <a href="../Html/Otpuska_bolnichnie.html">Отпуска-больничные</a>
+            </li>
+
+        </ul>
+        
+        <div class="User">
+            <span onclick="showPopup('popup10')">User</span>   
+            <img src="../icon/user-line.png" alt="" onclick="showPopup('popup10')">
+        </div>
+
+
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="photo-section">
+                <h2>Мой профиль</h2>
+                <img src="../icon/userIcon.png" alt="Фото профиля">
+                <div>ID: 12345</div>
+            </div>
+            <div class="profile-details">
+                <div><span>Имя:</span> Рустам</div>
+                <div><span>Фамилия:</span> Шарипов</div>
+                <div><span>Отчество:</span> Солиевич</div>
+                <div><span>Должность:</span> Программист</div>
+                <div><span>Отдел:</span> IT-отдел</div>
+                <div><span>Дата рождения:</span> 26.04.2004</div>
+                <div><span>Телефон:</span> +992 99 7777227</div>
+                <div><span>E-mail:</span> soliev@mail.com</div>
+                <div><span>Пол:</span> Мужской</div>
+                <div><span>Оклад:</span> 5 000 сомон</div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2024 Кадровый учет. Все права защищены.</p>
+    </footer>
+    <div id ="popup10" class="popup-s">
+        <div class="wrapper">
+            <div class="login-header">
+            <span class="popup-close" onclick="hidePopup('popup10')">&times;</span> 
+            </div>
+            <div class="login-box">
+            <span>Имя</span>
+            <span>Фамилия</span>
+            <span>Должность</span>
+            <span>Номер телефона</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
